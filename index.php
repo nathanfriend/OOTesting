@@ -19,7 +19,8 @@ Class Car {
     }
     
     public function checkEngine() {
-        echo "Engine is: ".$this->EngineState[$name];
+       // echo "Engine is: ".$this->EngineState[$name];
+        return $this->EngineState[$name];
     }
 }
 
@@ -44,22 +45,8 @@ Class Lorry extends Car {
 
 $ford = new Car();
 $ford->Ignition(1);
-$ford->checkEngine();
+echo $ford->checkEngine();
 
-echo "\r\r\n\n";
-$merc = new Lorry();
-$merc->Ignition(1);
-$merc->setTrailerSize(500);
-$merc->checkEngine();
-$merc->checkTrailerSize();
-
-
-$merc2 = new Lorry();
-$merc3 = new Lorry();
-$merc4 = new Lorry();
-print_r($merc2); 
-print_r($merc3);
-print_r($merc4);
 
 
 ?>
